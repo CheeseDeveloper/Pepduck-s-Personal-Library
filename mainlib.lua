@@ -93,6 +93,9 @@ function main:createWindow(titleName)
 	Close.TextScaled = true
 	Close.TextSize = 14.000
 	Close.TextWrapped = true
+	Close.MouseButton1Click:Connect(function()
+	    Pep_UI:Destroy()
+	end)
 
 	UICorner_2.CornerRadius = UDim.new(0.200000003, 0)
 	UICorner_2.Parent = Close
