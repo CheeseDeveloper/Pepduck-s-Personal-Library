@@ -1,6 +1,7 @@
 local main = {}
 
 function main:createWindow(titleName)
+	titleName = titleName or "Pep's UI"
 	local Pep_UI = Instance.new("ScreenGui")
 	local mainFrame = Instance.new("Frame")
 	local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
@@ -121,11 +122,12 @@ function main:createWindow(titleName)
 	
 	function lol:createButton(buttonName, callback)
 		callback = callback or function() end
+		buttonName = buttonName or "Button"
 		local Button_2 = Instance.new("TextButton")
 		local UICorner_3 = Instance.new("UICorner")
 		local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
 		
-		Button_2.Name = buttonName or "Button"
+		Button_2.Name = buttonName
 		Button_2.Parent = mainPageContainer
 		Button_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Button_2.BorderSizePixel = 0
